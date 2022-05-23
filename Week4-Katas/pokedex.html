@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokedex LaunchX</title>
+  <link href="./assets/css/pokedex.css" rel="stylesheet" />
+</head>
+
+<body>
+  <h1 class="pokedex-title">Pokedex LaunchX</h1>
+  <!-- Pokedex -->
+  <div class="pokedex-container">
+    <div class="pokedex">
+      <div class="pokedex-left">
+        <div class="pokedex-header">
+          <div class="pokedex-cam">
+            <div class="pokedex-cam-flare"></div>
+          </div>
+          <div class="pokedex-lights">
+            <div class="small-light red">
+              <div class="small-light-flare"></div>
+            </div>
+            <div class="small-light yellow">
+              <div class="small-light-flare"></div>
+            </div>
+            <div class="small-light green">
+              <div class="small-light-flare"></div>
+            </div>
+          </div>
+        </div>
+        <div class="pokedex-screen-container">
+          <div class="pokedex-screen-border">
+            <div class="pokedex-screen-top-decoration">
+              <div class="red-circle"></div>
+              <div class="red-circle"></div>
+            </div>
+            <div class="pokedex-screen">
+              <div class="pokemon-img-container">
+                <img class="pokemon-img"
+                  src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" id="pokeImg"
+                  alt="Pokemon">
+              </div>
+              <div class="pokemon-info">
+                <p id="pokeNameDisplay">Pikachu</p>
+                <p id="pokemonCode">25</p>
+              </div>
+            </div>
+            <div class="pokedex-screen-bottom-decoration">
+              <div class="small-light red">
+                <div class="small-light-flare"></div>
+              </div>
+              <div class="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-container">
+          <div class="joystick-container">
+            <div class="joystick"></div>
+            <div class="pokemon-switchers-container">
+              <div class="switcher red">
+                <div class="switcher-light on"></div>
+              </div>
+              <div class="switcher blue">
+                <div class="switcher-light off"></div>
+              </div>
+            </div>
+          </div>
+          <div class="pad-container">
+            <div class="name-input-screen">
+              <input class="pokemon-name" type="text" placeholder="pikachu" id="pokeName" name="pokeName">
+            </div>
+            <div class="dpad-control">
+              <div class="dpad">
+                <div class="dpad-left" onclick="clickLeftRight()">
+                  <div id="leftT"></div>
+                </div>
+                <div class="dpad-top" onclick="clickUp()">
+                  <div id="upT"></div>
+                </div>
+                <div class="dpad-right" onclick="clickLeftRight()">
+                  <div id="rightT"></div>
+                </div>
+                <div class="dpad-middle">
+                  <div id="midCircle"></div>
+                </div>
+                <div class="dpad-bottom" onclick="clickBottom()">
+                  <div id="downT"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Pokedex Right-->
+      <div class="pokedex-right">
+        <div class="description-screen-container">
+          <div class="pokemon-description">
+            <div class="pokemon-types">
+              <p>HP: </p>
+              <p id="pokemonHp">35 </p>
+            </div>
+            <div class="pokemon-types">
+              <p>ATK: </p>
+              <p id="pokemonAtk">55 </p>
+            </div>
+            <div class="pokemon-types">
+              <p>DEF: </p>
+              <p id="pokemonDef">40 </p>
+            </div>
+            <div class="pokemon-types">
+              <p>SP.ATK: </p>
+              <p id="pokemonSpAtk">50 </p>
+            </div>
+            <div class="pokemon-types">
+              <p>SP.DEF: </p>
+              <p id="pokemonSpDef">50 </p>
+            </div>
+            <div class="pokemon-types">
+              <p>SPEED: </p>
+              <p id="pokemonSpeed">90 </p>
+            </div>
+          </div>
+        </div>
+        <div class="pokedex-numberpad">
+          <div id="button-0" class="number-button">0</div>
+          <div id="button-1" class="number-button">1</div>
+          <div id="button-2" class="number-button">2</div>
+          <div id="button-3" class="number-button">3</div>
+          <div id="button-4" class="number-button">4</div>
+          <div id="button-5" class="number-button">5</div>
+          <div id="button-6" class="number-button">6</div>
+          <div id="button-7" class="number-button">7</div>
+          <div id="button-8" class="number-button">8</div>
+          <div id="button-9" class="number-button">9</div>
+        </div>
+        <div class="decoration-buttons">
+          <div class="deco-button"></div>
+          <div class="deco-button"></div>
+        </div>
+        <div class="pokedex-types">
+          <div class="types-container">
+            <div class="type-box">
+              <img id="pokemonType1" class="type-pokemon"
+                src="https://cdn2.bulbagarden.net/upload/4/4a/ElectricIC_Big.png">
+            </div>
+            <div class="type-box">
+              <img id="pokemonType2" class="type-pokemon" src="">
+            </div>
+          </div>
+          <div class="yellow-button">
+            <div class="big-dot-flare"></div>
+          </div>
+        </div>
+        <div class="pokedex-info-container">
+          <div class="extra-info-screen">
+            <div class="pokemon-types">
+              <p>Weight: </p>
+              <p>35</p>
+              </d>
+            </div>
+          </div>
+          <div class="extra-info-screen">
+            <div class="pokemon-types">
+              <p>Height: </p>
+              <p>7</p>
+              </d>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Pokedex -->
+    </div>
+  </div>
+  <div class="copyright-container">
+    <h2 class="autor">José Daniel Bautista Campos</h2>
+    <h2 class="corporation">2022 Front-End LaunchX</h2>
+  </div>
+  <!-- Scripts -->
+  <script src="./assets/js/pokedex.js"></script>
+</body>
+
+</html>
